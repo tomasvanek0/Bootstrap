@@ -1,0 +1,21 @@
+:root{
+    --text-pink: #e399a6;
+    --text-purple: #680ed3;
+}
+
+
+.welcome-info {
+    background: url("../images/apple_background.jpg");
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-pink {
+    color: var(--text-pink);
+}
+
+.text-purple {
+    color: var(--text-purple);
+}
+
