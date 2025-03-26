@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .welcome-info{
+            background: url("images/apple_background.jpg");
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="https://www.apple.com/"><img src="images/Apple.png" alt="apple"> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Review</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</header>
+        <main>
+            <section class="welcome-info align-content-center">
+                <div class="container text-center py-5 text-light">
+                    <h1 class="m-5">Explore Apple Products</h1>
+                    <p>The most exciting technology</p>
+                </div>
+            </section>
+        <div class="container my-5">
+            <div class="row text-center">
+                <div class="col-lg-4 col-md-12 col-xl-4 p-0 card">
+                    <img src="images/image.jpg" class="card-img-top" alt="obrázek 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-xl-4 p-0 card">
+                    <img src="images/image.jpg" class="card-img-top" alt="obrázek 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-xl-4 p-0 card">
+                    <img src="images/image.jpg" class="card-img-top" alt="obrázek 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+        <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
