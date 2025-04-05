@@ -33,7 +33,7 @@
                     </li>
                 </ul>
                 <div>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adminModal">
+                    <button type="button" class="btn btn-primary background-yellow" data-bs-toggle="modal" data-bs-target="#adminModal">
                         Admin
                     </button>
                 </div>
@@ -48,7 +48,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form>
@@ -65,7 +65,7 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary background-yellow">
                         <a class="nav-link text-white" href="admin.html">Login</a>
                     </button>
                 </form>
@@ -94,7 +94,7 @@
                             <p class="card-text">Phone 15 přináší vylepšený design s tenčími rámečky a USB-C konektorem.
                                 Nabízí výkonný čip A16 Bionic a vylepšený 48Mpx fotoaparát. Díky Dynamic Island a dlouhé
                                 výdrži baterie je skvělou volbou pro náročné uživatele.</p>
-                            <a href="#" class="btn btn-primary">Více informací</a>
+                            <a href="#" class="btn btn-primary background-yellow">Více informací</a>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
                             <p class="card-text">MacBook Pro nabízí výkonné čipy M3, M3 Pro a M3 Max pro maximální
                                 výkon. Disponuje Liquid Retina XDR displejem s vysokým jasem a přesnými barvami. Díky
                                 dlouhé výdrži baterie a tichému chlazení je ideální pro profesionály.</p>
-                            <a href="#" class="btn btn-primary">Více informací</a>
+                            <a href="#" class="btn btn-primary background-yellow">Více informací</a>
                         </div>
                     </div>
 
@@ -120,7 +120,7 @@
                             <p class="card-text">AirPods poskytují kvalitní zvuk s aktivním potlačením hluku a
                                 prostorovým audiem. Díky bezdrátovému nabíjení a dlouhé výdrži baterie jsou ideální na
                                 cesty. Pohodlné nošení a snadné párování zajišťují skvělý uživatelský zážitek.</p>
-                            <a href="#" class="btn btn-primary">Více informací</a>
+                            <a href="#" class="btn btn-primary background-yellow">Více informací</a>
                         </div>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
     <section>
         <div class="container px-4 text-center">
             <h2 class="text-center m-5 text-purple">Hodnocení našich produktů</h2>
-            <div class="row gx-5 gy-5">
+            <div class="row gx-5 gy-5 ">
                 <div class="col-lg-4">
                     <div class="card">
                         <img src="images/Jan.jpg" class="card-img-top" alt="Jan">
@@ -177,26 +177,28 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="min-vh-100 d-flex align-items-center">
         <div class="container">
             <h2 class="text-center text-purple m-5">Kontaktní formulář</h2>
-            <div class="col-lg-4">
-            <form class="mb-5">
-                <div class="mb-3">
-                    <label for="exampleInputEmail2" class="form-label">Email address</label>
-                    <input id="exampleInputEmail2" type="email" class="form-control" aria-describedby="emailHelp">
-                    <div class="form-text">We'll never share your email with anyone else.</div>
+            <div class="row justify-content-center">
+                <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10">
+                    <form class="mb-5">
+                        <div class="mb-3">
+                            <label for="emailInputForm" class="form-label">E-mail adresa</label>
+                            <input id="emailInputForm" type="email" class="form-control" aria-describedby="emailHelp">
+                            <div class="form-text">Nikdy nezveřejníme váš e-mail</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="textForm" class="form-label">Pošlete nám zprávu</label>
+                            <textarea class="form-control" id="textForm" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input id="GDPR" type="checkbox" class="form-check-input">
+                            <label class="form-check-label" for="GDPR">Souhlasíte se zpracováním osobních údajů</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 background-yellow">Submit</button>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword2" class="form-label">Password</label>
-                    <input id="exampleInputPassword2" type="password" class="form-control">
-                </div>
-                <div class="mb-3 form-check">
-                    <input id="exampleCheck2" type="checkbox" class="form-check-input">
-                    <label class="form-check-label" for="exampleCheck2">GDPR</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
             </div>
         </div>
     </section>

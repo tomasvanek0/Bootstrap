@@ -1,6 +1,10 @@
 :root{
     --text-pink: #e399a6;
     --text-purple: #680ed3;
+    --text-red: #f44336;
+    --text-orange: #ff9a00;
+    --background-yellow: #ffc600;
+    --backgorund-green: #00c997;
 }
 
 
@@ -18,4 +22,22 @@
 .text-purple {
     color: var(--text-purple);
 }
+
+.text-red {
+    color: var(--text-red);
+
+}
+.text-orange {
+    color: var(--text-orange);
+}
+.background-yellow {
+    background: var(--background-yellow);
+    border: var(--background-yellow);
+}
+.background-green {
+    color: var(--backgorund-green);
+    border-color: var(--backgorund-green);
+}
+
+
 
