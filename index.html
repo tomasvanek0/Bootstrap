@@ -6,6 +6,7 @@
     <title>Apple Bootstrap</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/_custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 </head>
 <body>
@@ -20,16 +21,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Domov</a>
+                        <a class="nav-link active" aria-current="page" href="#Domov">Domov</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Produkty</a>
+                        <a class="nav-link" href="#Produkty">Produkty</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Recenze</a>
+                        <a class="nav-link" href="#Recenze">Recenze</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Kontaktní Formulář</a>
+                        <a class="nav-link" href="#Galerie">Galerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Kontakt">Kontaktní Formulář</a>
                     </li>
                 </ul>
                 <div>
@@ -154,16 +158,16 @@
 
 
 <main>
-    <section class="welcome-info align-content-center">
+    <section id="Domov" class="welcome-info align-content-center">
         <div class="container text-center py-5 text-light">
             <h1 class="m-5">Objevte produkty ve světě Applu</h1>
-            <p>Technologie, které překračují hranice</p>
+            <p>Technologie, které překračují hranice na jednom místě</p>
         </div>
     </section>
 
-    <section>
+    <section id="Produkty" class="py-5">
         <div class="container px-4 text-center">
-            <h2 class="text-center m-5 text-purple">Vyzkoušejte naše produkty</h2>
+            <h2 class="text-center m-5 text-purple fw-bold">Vyzkoušejte naše produkty</h2>
             <div class="row gx-5 gy-5">
                 <div class="col-lg-4">
                     <div class="card">
@@ -216,74 +220,83 @@
         </div>
     </section>
 
-    <section class="py-5 bg-light">
-        <div class="container px-4 text-center">
-            <h2 class="mb-5 text-primary fw-bold">Hodnocení našich produktů</h2>
-            <div class="row gx-4 gy-5">
+    <section id="Recenze" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-5 text-center text-purple fw-bold">Hodnocení našich produktů</h2>
 
-
-                <div class="col-lg-4">
-                    <div class="card">
-                        <div class="img-container">
-                            <img src="images/Jan.jpg" class="card-img-top " alt="Jan">
-                        </div>
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-semibold mb-3">Recenze iPhone 15 od Jana</h5>
-                            <p class="card-text text-muted">iPhone 15 přináší skvělý výkon a moderní design s USB-C
-                                konektorem. Fotoaparát fotí detailně a baterie vydrží celý den.</p>
-                            <ul class="list-unstyled text-start small mt-3">
-                                <li>+ Kvalitní fotoaparát</li>
-                                <li>+ Svižný výkon</li>
-                                <li>+ Dlouhá výdrž baterie</li>
-                            </ul>
-                        </div>
-                    </div>
+            <!-- Recenze 1 -->
+            <div class="row justify-content-center align-items-center mb-5">
+                <div class="col-md-3 text-center mb-3 ">
+                    <img src="images/Jan.jpg" class="img-fluid rounded shadow-sm" alt="Jan">
                 </div>
-
-
-                <div class="col-lg-4">
-                    <div class="card">
-                        <div class="img-container">
-                            <img src="images/Lucie.jpg" class="card-img-top " alt="Lucie">
-                        </div>
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-semibold mb-3">Recenze MacBook Pro od Lucie</h5>
-                            <p class="card-text text-muted">MacBook Pro nabízí obrovský výkon a krásný displej.
-                                Klávesnice je tichá a baterie dlouho vydrží. Skvělá volba pro profesionály.</p>
-                            <ul class="list-unstyled text-start small mt-3">
-                                <li>+ Výkonný hardware</li>
-                                <li>+ Nádherný displej</li>
-                                <li>+ Tichý provoz</li>
-                            </ul>
-                        </div>
+                <div class="col-md-8">
+                    <h5 class="fw-semibold mb-2">Recenze iPhone 15 od Jana</h5>
+                    <div class="text-warning mb-2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
                     </div>
+                    <p class="text-muted">iPhone 15 přináší skvělý výkon a moderní design s USB-C konektorem. Fotoaparát fotí detailně a baterie vydrží celý den.</p>
+                    <ul class="list-unstyled small">
+                        <li>+ Kvalitní fotoaparát</li>
+                        <li>+ Svižný výkon</li>
+                        <li>+ Dlouhá výdrž baterie</li>
+                    </ul>
                 </div>
+            </div>
 
 
-                <div class="col-lg-4">
-                    <div class="card">
-                        <div class="img-container">
-                            <img src="images/Marta.jpg" class="card-img-top " alt="AirPods">
-                        </div>
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-semibold mb-3">Recenze AirPods od Marty</h5>
-                            <p class="card-text text-muted">AirPods mají skvělý zvuk a efektivní potlačení hluku. Jsou
-                                lehké a snadno se párují. Ideální pro cestování a každodenní poslech.</p>
-                            <ul class="list-unstyled text-start small mt-3">
-                                <li>+ Skvělý zvuk</li>
-                                <li>+ Snadné párování</li>
-                                <li>+ Dlouhá výdrž baterie</li>
-                            </ul>
-                        </div>
+            <div class="row justify-content-center align-items-center mb-5 flex-md-row-reverse">
+                <div class="col-md-3 text-center mb-3 ">
+                    <img src="images/Lucie.jpg" class="img-fluid rounded shadow-sm" alt="Lucie">
+                </div>
+                <div class="col-md-8">
+                    <h5 class="fw-semibold mb-2">Recenze MacBook Pro od Lucie</h5>
+                    <div class="text-warning mb-2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
                     </div>
+                    <p class="text-muted">MacBook Pro nabízí obrovský výkon a krásný displej. Klávesnice je tichá a baterie dlouho vydrží. Skvělá volba pro profesionály.</p>
+                    <ul class="list-unstyled small">
+                        <li>+ Výkonný hardware</li>
+                        <li>+ Nádherný displej</li>
+                        <li>+ Tichý provoz</li>
+                    </ul>
                 </div>
+            </div>
 
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-3 text-center mb-3 ">
+                    <img src="images/Marta.jpg" class="img-fluid rounded shadow-sm" alt="Marta">
+                </div>
+                <div class="col-md-8">
+                    <h5 class="fw-semibold mb-2">Recenze AirPods od Marty</h5>
+                    <div class="text-warning mb-2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+                    <p class="text-muted">AirPods mají skvělý zvuk a efektivní potlačení hluku. Jsou lehké a snadno se párují. Ideální pro cestování a každodenní poslech.</p>
+                    <ul class="list-unstyled small">
+                        <li>+ Skvělý zvuk</li>
+                        <li>+ Snadné párování</li>
+                        <li>+ Dlouhá výdrž baterie</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-    <section class="py-5">
+    <section id="Galerie" class="py-5">
         <div class="container">
-            <h2 class="text-purple text-center py-5">Galerie našich produktů</h2>
+            <h2 class="text-purple text-center py-5 fw-bold">Galerie našich produktů</h2>
             <div class="row justify-content-center align-items-center">
                 <div class="col-12 col-md-8 col-lg-6">
                     <div id="carouselIndicators" class="carousel slide shadow rounded-4" data-bs-ride="carousel">
@@ -329,32 +342,52 @@
             </div>
         </div>
     </section>
-    <section class="min-vh-100 d-flex align-items-center bg-light">
+    <section id="Kontakt" class="bg-light py-5">
         <div class="container">
-            <h2 class="text-center text-purple m-5">Kontaktní formulář</h2>
-            <div class="row justify-content-center">
-                <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10">
-                    <form class="mb-5">
-                        <div class="mb-3">
+            <h2 class="text-center text-purple fw-bold mb-5">Kontaktní formulář</h2>
+            <div class="row g-5">
+
+                <div class="col-lg-6">
+                    <form>
+                        <div class="mb-4">
                             <label for="nameInputForm" class="form-label">Jméno</label>
                             <input id="nameInputForm" type="text" class="form-control" placeholder="Vaše jméno">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label for="emailInputForm" class="form-label">E-mail adresa</label>
                             <input id="emailInputForm" type="email" class="form-control" aria-describedby="emailHelp"
                                    placeholder="Váš E-mail">
                             <div class="form-text">Nikdy nezveřejníme váš e-mail</div>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label for="textForm" class="form-label">Pošlete nám zprávu</label>
-                            <textarea class="form-control" id="textForm" rows="3" placeholder="Vaše zpráva"></textarea>
+                            <textarea class="form-control" id="textForm" rows="4" placeholder="Vaše zpráva"></textarea>
                         </div>
-                        <div class="mb-3 form-check">
+                        <div class="mb-4 form-check">
                             <input id="GDPR" type="checkbox" class="form-check-input">
                             <label class="form-check-label" for="GDPR">Souhlasíte se zpracováním osobních údajů</label>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100 background-yellow">Submit</button>
+                        <button type="submit" class="btn btn-primary w-100 background-yellow">Odeslat</button>
                     </form>
+                </div>
+
+
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-purple fw-bold mb-4">Sledujte nás na sociálních sítích</h3>
+                        <p class="mb-4">Zůstaňte v obraze – přidejte si nás na sociálních sítích a buďte první, kdo se dozví o novinkách, akcích nebo aktualizacích.</p>
+                        <div class="gap-3">
+                            <a href="https://www.facebook.com" class="btn btn-outline-primary" target="_blank">
+                                <i class="bi bi-facebook me-2"></i>Facebook
+                            </a>
+                            <a href="https://www.instagram.com" class="btn btn-outline-danger" target="_blank">
+                                <i class="bi bi-instagram me-2"></i>Instagram
+                            </a>
+                            <a href="https://www.x.com" class="btn btn-outline-dark" target="_blank">
+                                <i class="bi bi-x me-2"></i>Twitter
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -363,4 +396,9 @@
 </main>
 <script src="js/bootstrap.bundle.js"></script>
 </body>
+<footer>
+    <div class="bg-black my-0">
+        <p class="text-center text-secondary my-0 py-3">&copy; 2025 Tomáš Vaněk.</p>
+    </div>
+</footer>
 </html>

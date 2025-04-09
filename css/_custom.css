@@ -5,6 +5,7 @@
     --text-orange: #ff9a00;
     --background-yellow: #ffc600;
     --backgorund-green: #00c997;
+    --box-shadow: #6c6969;
 }
 
 
@@ -37,6 +38,10 @@
 .background-green {
     color: var(--backgorund-green);
     border-color: var(--backgorund-green);
+}
+
+.box-shadow {
+    box-shadow: var(--box-shadow) 1px 1px 0;
 }
 
 
