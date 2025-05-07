@@ -1,41 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin Panel</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/_custom.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/_custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
+<!-- Modal for adding user -->
+<div class="modal fade" id="addUserModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add User</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="userForm">
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">E-mail</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">ID</label>
+                        <input type="number" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 <div class="container-fluid">
-  <div class="row">
-    <!-- sidebar -->
-    <div class="col-sm-4 col-md-3 col-lg-2  d-flex flex-column bg-dark p-4 vh-100">
-      <h1 class="text-white">Admin Panel</h1>
-      <hr class="text-white">
-      <nav class=" nav d-flex flex-column">
-        <a href="admin.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-dashboard"></i> Dashboard </a>
-        <a href="products.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-list-ul "></i> Products</a>
-        <a href="orders.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-user "></i> Orders</a>
-        <a href="users.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-address-book"></i> Users
-        </a>
+    <div class="row">
+        <!-- sidebar -->
+        <div class="col-sm-4 col-md-3 col-lg-2  d-flex flex-column bg-dark p-4 vh-100">
+            <h1 class="text-white">Admin Panel</h1>
+            <hr class="text-white">
+            <nav class=" nav d-flex flex-column">
+                <a href="admin.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-dashboard"></i> Dashboard
+                </a>
+                <a href="products.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-list-ul "></i>
+                    Products</a>
+                <a href="orders.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-user "></i> Orders</a>
+                <a href="users.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-address-book"></i> Users
+                </a>
 
 
-      </nav>
-      <div class="mt-auto text-white">
-        <hr>
-        <p class="text-white text-admin m-0">Tomáš Vaněk</p>
-      </div>
+            </nav>
+            <div class="mt-auto text-white">
+                <hr>
+
+                <p class="text-white text-admin m-0">Tomáš Vaněk</p>
+            </div>
+        </div>
+        <!-- content -->
+        <div class="col-sm-8 col-md-9 col-lg-10 bg-light vh-100 p-5">
+            <h2>Users</h2>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>E-mail</th>
+                    <th>Phone number</th>
+                    <th>ID</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Jan Janů</td>
+                    <td>jan@gmail.com</td>
+                    <td>+421 874 589 369</td>
+                    <td>#789</td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                Actions
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-red" href="#">Delete</a></li>
+                                <li><a class="dropdown-item" href="#">Detail</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Karel Karlů</td>
+                    <td>karel@gmail.com</td>
+                    <td>+421 777 589 632</td>
+                    <td>#788</td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                Actions
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-red" href="#">Delete</a></li>
+                                <li><a class="dropdown-item" href="#">Detail</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zdeněk Zdeňků</td>
+                    <td>zdenek@gmail.com</td>
+                    <td>+421 586 324 778</td>
+                    <td>#787</td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                Actions
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-red" href="#">Delete</a></li>
+                                <li><a class="dropdown-item" href="#">Detail</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addUserModal">Add User</button>
+
+        </div>
     </div>
-    <!-- content -->
-    <div class="col-sm-8 col-md-9 col-lg-10 bg-light vh-100 p-4">
-      <h2>Users</h2>
-
-    </div>
-  </div>
 </div>
 
 <script src="js/bootstrap.bundle.js"></script>
