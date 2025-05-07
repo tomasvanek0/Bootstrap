@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/_custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 
 </head>
 <body>
@@ -33,6 +35,32 @@
         <!-- content -->
         <div class="col-sm-8 col-md-9 col-lg-10 bg-light vh-100 p-4">
             <h2>Dashboard</h2>
+            <div
+                    id="myChart" style="width:100%; max-width:600px; height:500px;">
+            </div>
+
+  <!--          <script>
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(drawChart);
+
+                function drawChart() {
+                    const data = google.visualization.arrayToDataTable([
+                        ['Product', 'pieces'],
+                        ['Lamp',54.8],
+                        ['Chair',48.6],
+                        ['Table',44.4],
+
+                    ]);
+
+                    const options = {
+                        title:'Most selling products',
+                        is3D:true
+                    };
+
+                    const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+                    chart.draw(data, options);
+                }
+            </script>   -->
 
         </div>
     </div>
