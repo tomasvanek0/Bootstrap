@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/_custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <!-- sidebar -->
+        <div class="col-sm-4 col-md-3 col-lg-2 d-flex flex-column bg-dark p-4 vh-100">
+            <h1 class="text-white">Admin Panel</h1>
+            <hr class="text-white">
+            <nav class="nav d-flex flex-column">
+                <a href="admin.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-dashboard"></i> Dashboard </a>
+                <a href="products.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-list-ul"></i> Products</a>
+                <a href="orders.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-user"></i> Orders</a>
+                <a href="users.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-address-book"></i> Users </a>
+            </nav>
+            <div class="mt-auto text-white">
+                <hr>
+                <a href="user.html" class="text-white text-admin m-0 text-decoration-none">Tomáš Vaněk</a>
+            </div>
+        </div>
+        <div class="col-sm-8 col-md-9 col-lg-10 bg-light vh-100 p-5 overflow-auto">
+            <h2 class="mb-4">User Profile</h2>
+
+            <div class="card border-0 shadow-sm p-4">
+                <div class="row g-4 align-items-center">
+                    <div class="col-auto">
+                        <img src="images/photo.jpg" alt="Tomáš Vaněk" class="rounded-circle img-fluid" style="max-width: 150px;">
+                    </div>
+                    <div class="col">
+                        <h4 class="mb-2">Tomáš Vaněk</h4>
+                        <p class="mb-1"><i class="fa fa-envelope me-2 text-muted"></i> tomas.vanek@example.com</p>
+                        <p class="mb-0"><i class="fa fa-phone me-2 text-muted"></i> +420 123 456 789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

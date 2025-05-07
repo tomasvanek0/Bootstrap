@@ -8,67 +8,89 @@
     <link rel="stylesheet" href="css/_custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-
 </head>
 <body>
 <div class="container-fluid">
     <div class="row">
         <!-- sidebar -->
-        <div class="col-sm-4 col-md-3 col-lg-2  d-flex flex-column bg-dark p-4 vh-100">
+        <div class="col-sm-4 col-md-3 col-lg-2 d-flex flex-column bg-dark p-4 vh-100">
             <h1 class="text-white">Admin Panel</h1>
             <hr class="text-white">
-            <nav class=" nav d-flex flex-column">
+            <nav class="nav d-flex flex-column">
                 <a href="admin.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-dashboard"></i> Dashboard </a>
-                <a href="products.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-list-ul "></i> Products</a>
-                <a href="orders.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-user "></i> Orders</a>
-                <a href="users.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-address-book"></i> Users
-                </a>
-
-
+                <a href="products.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-list-ul"></i> Products</a>
+                <a href="orders.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-user"></i> Orders</a>
+                <a href="users.html" class="nav-link text-white py-1 px-0"> <i class="fa fa-address-book"></i> Users </a>
             </nav>
             <div class="mt-auto text-white">
                 <hr>
-                <p class="text-white text-admin m-0">Tomáš Vaněk</p>
-            </div>
+                <a href="user.html" class="text-white text-admin m-0 text-decoration-none">Tomáš Vaněk</a>            </div>
         </div>
+
         <!-- content -->
-        <div class="col-sm-8 col-md-9 col-lg-10 bg-light vh-100 p-5">
+        <div class="col-sm-8 col-md-9 col-lg-10 bg-light vh-100 p-5 overflow-auto">
             <h2>Dashboard</h2>
-            <div
-                    id="myChart" style="width:100%; max-width:600px; height:500px;">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="salesChart" style="width:100%; height:400px;"></div>
+                </div>
+                <div class="col-md-6">
+                    <div id="usersChart" style="width:100%; height:400px;"></div>
+                </div>
             </div>
 
             <script>
                 google.charts.load('current', {'packages':['corechart']});
-                google.charts.setOnLoadCallback(drawChart);
+                google.charts.setOnLoadCallback(drawCharts);
 
-                function drawChart() {
+                function drawCharts() {
+                    drawSalesChart();
+                    drawUsersChart();
+                }
+
+                function drawSalesChart() {
                     const data = google.visualization.arrayToDataTable([
-                        ['Product', 'pieces'],
-                        ['Lamp',240],
-                        ['Chair',70],
-                        ['Table',60],
-
+                        ['Month', 'Sales (EUR)'],
+                        ['January', 1000],
+                        ['February', 1170],
+                        ['March', 660],
+                        ['April', 1030]
                     ]);
 
                     const options = {
-                        title:'Most selling products',
-                        is3D:true
+                        title: 'Monthly Sales',
+                        hAxis: {title: 'Month'},
+                        vAxis: {title: 'Sales'},
+                        legend: 'none'
                     };
 
-                    const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+                    const chart = new google.visualization.ColumnChart(document.getElementById('salesChart'));
+                    chart.draw(data, options);
+                }
+
+                function drawUsersChart() {
+                    const data = google.visualization.arrayToDataTable([
+                        ['Month', 'New Users'],
+                        ['January', 50],
+                        ['February', 80],
+                        ['March', 65],
+                        ['April', 90]
+                    ]);
+
+                    const options = {
+                        title: 'New Users Over Time',
+                        curveType: 'function',
+                        legend: { position: 'bottom' }
+                    };
+
+                    const chart = new google.visualization.LineChart(document.getElementById('usersChart'));
                     chart.draw(data, options);
                 }
             </script>
-
-
         </div>
     </div>
 </div>
-
-
-
 
 <script src="js/bootstrap.bundle.js"></script>
 </body>
